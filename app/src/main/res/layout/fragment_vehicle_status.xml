@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activity.VehicleStatusActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/progLay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_weight="0.4"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6">
+
+                <ImageView
+                    android:id="@+id/statusIconImage"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:text="@string/total_milage" />
+
+                            <TextView
+                                android:id="@+id/milesTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="20dp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:text="@string/trips" />
+
+                            <TextView
+                                android:id="@+id/tripsTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="20dp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:text="@string/average_fuel_consumption" />
+
+                            <TextView
+                                android:id="@+id/mpgTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="20dp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:text="@string/state" />
+
+                            <TextView
+                                android:id="@+id/engineTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="20dp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/layoutParkedVehicles"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/rectangle" />
+
+                    <ImageView
+                        android:id="@+id/batteryStatusIcon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/battery_voltage"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/layoutCrashes"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1">
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/rectangle" />
+
+                    <ImageView
+                        android:id="@+id/exhaustStatusIcon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/exhaust_emmision"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/rectangle" />
+
+                    <ImageView
+                        android:id="@+id/engineStatusIcon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/engine_coolant_temperature"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/rectangle" />
+
+                    <ImageView
+                        android:id="@+id/faultsIcon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="20dp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/faults"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/layoutActiveVehicles"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/rectangle" />
+
+                    <ImageView
+                        android:id="@+id/socketIcon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="Socket"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/rectangle" />
+
+                    <ImageView
+                        android:id="@+id/transportationIcon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="20dp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="Car Transportation"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/errorsList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.4"
+            android:divider="#00000000"
+            android:dividerHeight="2dp" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/loadingProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gradient_background"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorAccent"
+            android:indeterminateTintMode="src_atop" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

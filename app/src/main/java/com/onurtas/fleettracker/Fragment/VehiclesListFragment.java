@@ -1,0 +1,134 @@
+package com.onurtas.fleettracker.Fragment;
+
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.ArrayAdapter;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+
+import com.onurtas.fleettracker.Activity.VehicleStatusActivity;
+import com.onurtas.fleettracker.Model.Car;
+import com.onurtas.fleettracker.ViewModel.VehiclesListViewModel;
+import com.onurtas.fleettracker.databinding.FragmentVehiclesListviewBinding;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class VehiclesListFragment extends Fragment {
+
+    private final ArrayList<String> carPlatesForList = new ArrayList<>();
+    private final List<Car> currentCarsObjectsList = new ArrayList<>();
+    private FragmentVehiclesListviewBinding binding;
+    private VehiclesListViewModel viewModel;
+    private ArrayAdapter<String> adapter;
+
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        binding = FragmentVehiclesListviewBinding.inflate(inflater, container, false);
+        return binding.getRoot();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        viewModel = new ViewModelProvider(requireActivity()).get(VehiclesListViewModel.class);
+
+        adapter = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_list_item_1, carPlatesForList);
+        binding.vehiclesList.setAdapter(adapter);
+
+        setupUIListeners();
+        observeViewModel();
+
+        viewModel.fetchCars();
+
+    }
+
+    private void setupUIListeners() {
+        binding.vehiclesList.setOnItemClickListener((parent, itemView, position, id) -> {
+            handleCarSelection(position);
+        });
+
+        binding.searchText.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                // Hid ethe keyboard
+                InputMethodManager imm = (InputMethodManager) requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                if (imm != null && binding.searchText.getWindowToken() != null) {
+                    imm.hideSoftInputFromWindow(binding.searchText.getWindowToken(), 0);
+                }
+                String query = binding.searchText.getText().toString();
+                viewModel.filterCars(query);
+                return true;
+            }
+            return false;
+        });
+
+        binding.pullToRefresh.setOnRefreshListener(() -> {
+            viewModel.fetchCars(); // Inform ViewModel
+        });
+    }
+
+    private void handleCarSelection(int position) {
+        Car selectedCar = currentCarsObjectsList.get(position); // Get the full Car object
+        if (selectedCar != null && selectedCar.plate != null) {
+            Intent intent = new Intent(getActivity(), VehicleStatusActivity.class);
+            intent.putExtra("PLATE", selectedCar.plate);
+            startActivity(intent);
+        } else {
+            Toast.makeText(getContext(), "Car data not available.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void observeViewModel() {
+
+        viewModel.getFilteredCars().observe(getViewLifecycleOwner(), cars -> {
+            if (cars != null) {
+                currentCarsObjectsList.clear();
+                currentCarsObjectsList.addAll(cars);
+
+                // Update the list of plate strings for the ArrayAdapter
+                carPlatesForList.clear();
+                for (Car car : cars)
+                    carPlatesForList.add(car.plate);
+
+                adapter.notifyDataSetChanged();
+
+            }
+        });
+
+
+        viewModel.getIsLoading().observe(getViewLifecycleOwner(), isLoading -> {
+            boolean loading = (isLoading != null && isLoading);
+
+            binding.pullToRefresh.setRefreshing(loading);
+
+            if (loading && carPlatesForList.isEmpty()) {
+                binding.loadingProgressBar.setVisibility(View.VISIBLE);
+            } else if (!loading) {
+                binding.loadingProgressBar.setVisibility(View.GONE);
+            }
+        });
+
+        viewModel.getErrorMessage().observe(getViewLifecycleOwner(), errorMessage -> {
+            if (errorMessage != null && !errorMessage.isEmpty()) {
+                Toast.makeText(getContext(), errorMessage, Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
+}

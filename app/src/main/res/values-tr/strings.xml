@@ -1,0 +1,92 @@
+<resources>
+    <!-- General App Strings -->
+    <string name="language">Turkish</string>
+    <string name="app_name">Fleet Tracker</string>
+    <string name="app_version_label">Uygulama versiyonu: </string>
+    <string name="error_getting_version">Uygulama versiyonu bulunamadi</string>
+    <string name="select_button_text">Sec</string>
+    <string name="cancel_button_text">Vazgec</string>
+    <string name="minutes">Dakika</string>
+    <string name="minutes_short"> Dk</string>
+    <string name="liters"> Litre</string>
+    <string name="kilometers"> km</string>
+
+    <!-- Login & Onboarding -->
+    <string name="LoginActivityTitle">Fleet Tracker - Giris</string>
+    <string name="login">Giris</string>
+    <string name="reset">Sifirla</string>
+    <string name="login_welcome_title">Filo Parmaklarınızın Ucunda</string>
+    <string name="hint_email">kullanici adi</string>
+    <string name="hint_password">parola</string>
+
+    <!-- Dashboard -->
+    <string name="HomeFragmentTitle">Fleet Tracker - Ana Panel</string>
+    <string name="dashboard">Ana Panel</string>
+    <string name="active_vehicles">Aktif Kullanilan</string>
+    <string name="parked_vehicles">Park Edilen</string>
+    <string name="crashes">Kazalar</string>
+    <string name="breaches">Kural Ihlalleri</string>
+    <string name="under_maintenance">Bakim Altinda</string>
+    <string name="fuel_consumption">Yakıt Tuketimi</string>
+    <string name="TotalDrivingScore">Toplam Surus Skoru</string>
+
+    <!-- Trips -->
+    <string name="TripsFragmentTitle">Fleet Tracker - Yolculuklar</string>
+    <string name="title_activity_trips">Yapilan Yolculuklar</string>
+    <string name="TripDetailsActivity">Fleet Tracker - Yolculuk Detaylari</string>
+    <string name="TripsFilterActivityTitle">Fleet Tracker - Yolculuk Filtreleme</string>
+    <string name="search_bar_trip_hint">Tarih, plaka veya sürücü girin</string>
+    <!-- For TripsFilterActivity Toasts and Messages -->
+    <string name="end_date_adjusted">Bitiş tarihi, başlangıç tarihiyle eşleşecek şekilde ayarlandı</string> <!-- TRANSLATE THIS -->
+    <string name="end_date_cannot_be_before_start_date">Bitiş tarihi, başlangıç tarihinden önce olamaz</string> <!-- TRANSLATE THIS -->
+    <string name="trips_filter_all">Tümü</string>
+    <string name="trips_filter_last_month">Son Ay</string>
+    <string name="trips_filter_last_week">Son Hafta</string>
+    <string name="trips_filter_today">Bugün</string>
+    <string name="filter_apply">Filtreleri Uygula</string>
+    <string name="start_date">Baslangic Tarihi</string>
+    <string name="end_date">Bitis Tarihi</string>
+    <string name="select_date">Tarih Sec</string>
+    <string name="distance">Mesafe</string>
+    <string name="duration">Gecen Zaman</string>
+    <string name="overall_score">Genel Puan</string>
+    <string name="safety_score">Guvenlik Puani</string>
+    <string name="economy_score">Tasarruf Puani</string>
+    <string name="trips">Yolculuklar</string>
+
+    <!-- Drivers -->
+    <string name="DriversFragmentTitle">Fleet Tracker - Soforler</string>
+    <string name="DriverDetailsTitle">Fleet Tracker - Sofor Yolculuk Skorlari</string>
+    <string name="filter_by_driver_name">Surucu adina gore filtrele</string>
+    <string name="drivers">Soforler</string>
+
+    <!-- Vehicles -->
+    <string name="VehiclesFragmentTitle">Fleet Tracker - Araclar</string>
+    <string name="VehicleStatusActivityTitle">Fleet Tracker - Arac Durumu</string>
+    <string name="search_bar_hint">Bir arac arayin</string>
+    <string name="car_status">Arac Durumu</string>
+    <string name="engine_coolant_temperature">Motor Hararet Isisi</string>
+    <string name="battery_voltage">Batarya Voltaji</string>
+    <string name="total_milage">Toplam KM</string>
+    <string name="next_maintanence">Bir Sonraki Bakim</string>
+    <string name="error_codes">Bulunan Hata Kodlari Asagida:</string>
+    <string name="curren_location">Konum</string>
+    <string name="vehicles">Araclar</string>
+    <string name="model">Model:</string>
+    <string name="brand">Marka:</string>
+    <string name="year">Yil:</string>
+    <string name="color">Renk:</string>
+    <string name="transmission">Sanzuman:</string>
+    <string name="plate">Plaka:</string>
+    <string name="filter_by_plate_number">Plakaya gore filtrele</string>
+    <string name="exhaust_emmision">Egzos Emisyonu</string>
+    <string name="faults">Ariza Kodlari</string>
+    <string name="average_fuel_consumption">L/100 km</string>
+    <string name="state">Durum</string>
+
+    <!-- Settings -->
+    <string name="SettingsFragmentTitle">Fleet Tracker - Ayarlar</string>
+    <string name="settings">Ayarlar</string>
+    <string name="language_message">Tercih edilen dili buradan degistirebilirsiniz:</string>
+
+</resources>

@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Fragment.DriverInfoFragment">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:showDividers="end">
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="---DATE---"
+                    android:textSize="17dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:showDividers="end">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+
+                    <TextView
+                        android:id="@+id/txtDriverName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="TBD"
+                        android:textSize="24dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="#434343" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+
+                    <TextView
+                        android:id="@+id/txtPlateNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="TBD"
+                        android:textSize="24dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#434343" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:padding="30dp"
+                android:visibility="visible">
+
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/overall_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    app:cpb_background_progressbar_color="#545454"
+                    app:cpb_background_progressbar_width="5dp"
+                    app:cpb_progressbar_color="#F44336"
+                    app:cpb_progressbar_width="10dp" />
+
+                <TextView
+                    android:id="@+id/txtInfoScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:text="000"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="56dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="0.25"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/pbSpeedRate"
+                        android:layout_alignBottom="@+id/pbSpeedRate"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/speed"
+                        android:scaleX="0.6"
+                        android:scaleY="0.6" />
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:id="@+id/pbSpeedRate"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        app:cpb_background_progressbar_color="#545454"
+                        app:cpb_background_progressbar_width="3dp"
+                        app:cpb_progressbar_color="#F44336"
+                        app:cpb_progressbar_width="3dp" />
+
+
+                    <TextView
+                        android:id="@+id/txtSpeedRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pbSpeedRate"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:text="000"
+                        android:textSize="18dp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="0.25"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/pbMobileUsage"
+                        android:layout_alignBottom="@+id/pbMobileUsage"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/phone"
+                        android:scaleX="0.6"
+                        android:scaleY="0.6" />
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:id="@+id/pbMobileUsage"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        app:cpb_background_progressbar_color="#545454"
+                        app:cpb_background_progressbar_width="3dp"
+                        app:cpb_progressbar_color="#F44336"
+                        app:cpb_progressbar_width="3dp" />
+
+                    <TextView
+                        android:id="@+id/txtMobileUsage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pbMobileUsage"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:text="000"
+                        android:textSize="18dp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="0.25"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/pbBrakeRate"
+                        android:layout_alignBottom="@+id/pbBrakeRate"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/brake"
+                        android:scaleX="0.6"
+                        android:scaleY="0.6" />
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:id="@+id/pbBrakeRate"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        app:cpb_background_progressbar_color="#545454"
+                        app:cpb_background_progressbar_width="3dp"
+                        app:cpb_progressbar_color="#F44336"
+                        app:cpb_progressbar_width="3dp" />
+
+                    <TextView
+                        android:id="@+id/txtBrakeRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pbBrakeRate"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:text="000"
+                        android:textSize="18dp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="0.25"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/pbRevRate"
+                        android:layout_alignBottom="@+id/pbRevRate"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/dashboard_icon"
+                        android:scaleX="0.6"
+                        android:scaleY="0.6" />
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:id="@+id/pbRevRate"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        app:cpb_background_progressbar_color="#545454"
+                        app:cpb_background_progressbar_width="3dp"
+                        app:cpb_progressbar_color="#F44336"
+                        app:cpb_progressbar_width="3dp" />
+
+                    <TextView
+                        android:id="@+id/txtRevRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pbRevRate"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:text="000"
+                        android:textSize="18dp" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="6dp"
+                android:background="#434343" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:background="#EFEFEF"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_marginBottom="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="Highlights"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="30dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight=".33"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.33"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/first"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight=".5"
+                            android:gravity="center"
+                            android:text="Mobile Use"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16dp" />
+
+
+                        <TextView
+                            android:id="@+id/txtMobileHighlight"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/first"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight=".5"
+                            android:gravity="center"
+                            android:text="1:18Hr"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="#989898" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.33"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/first"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight=".5"
+                            android:gravity="center"
+                            android:text="Harsh Brakes"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16dp" />
+
+
+                        <TextView
+                            android:id="@+id/txtBrakeHighlight"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/first"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight=".5"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="#989898" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.33"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/first"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight=".5"
+                            android:gravity="center"
+                            android:text="Acceleration Aggresiveness"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16dp" />
+
+
+                        <TextView
+                            android:id="@+id/txtAccelerationlight"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/first"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight=".5"
+                            android:gravity="center"
+                            android:text="Medium"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/loadingProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_background"
+            android:visibility="visible"
+            tools:visibility="invisible">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/colorAccent"
+                android:indeterminateTintMode="src_atop" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

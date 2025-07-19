@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="?attr/colorTertiary"
+    app:strokeWidth="0.5dp"
+    app:strokeColor="?attr/colorOnSurface"
+    android:layout_margin="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtStartDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textColor="?attr/colorOnSurface"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="11/11/1111, 11:11:11" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtEndTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textColor="?attr/colorOnSurface"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stats_flow"
+            tools:text="11/11/1111, 11:11:11" />
+
+
+        <ImageView
+            android:id="@+id/roadImage"
+            android:layout_width="28dp"
+            android:layout_height="0dp"
+            android:src="@drawable/cartoonish_path"
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintTop_toTopOf="@id/txtStartDate"
+            app:layout_constraintBottom_toBottomOf="@id/txtEndTime"
+            app:layout_constraintStart_toEndOf="@id/txtStartDate"
+            app:layout_constraintEnd_toStartOf="@id/txtFromLocation"  />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtFromLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textColor="?attr/colorOnSurface"
+            android:gravity="start"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@id/roadImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@id/txtStartDate"
+            tools:text="Origin Location Very Long Name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtEndLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textColor="?attr/colorOnSurface"
+            android:gravity="start"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintStart_toStartOf="@+id/txtFromLocation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@id/txtEndTime"
+            tools:text="Destination Location Very Long Name" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/stats_flow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            app:constraint_referenced_ids="distance_stat_container,fuel_stat_container,duration_stat_container"
+            app:flow_wrapMode="chain"
+            app:flow_horizontalStyle="spread_inside"
+            app:flow_maxElementsWrap="3"
+            app:layout_constraintStart_toStartOf="@+id/txtFromLocation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtStartDate"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/license_plate_frame"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="@+id/txtPlate"
+            app:layout_constraintEnd_toEndOf="@+id/txtPlate"
+            app:layout_constraintTop_toTopOf="@+id/txtPlate"
+            app:layout_constraintBottom_toBottomOf="@+id/txtPlate"
+            android:layout_margin="-6dp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtPlate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textColor="?attr/colorOnSurface"
+            android:paddingStart="14sp"
+            android:paddingEnd="6sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/stats_flow"
+            app:layout_constraintBottom_toBottomOf="@id/stats_flow"
+            tools:text="34 AB 2222" />
+
+        <LinearLayout
+            android:id="@+id/distance_stat_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?attr/colorOnSurface"
+                tools:text="150" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:textColor="?android:attr/textColorSecondary"
+                android:text="@string/kilometers" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fuel_stat_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtFuelConsumption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?attr/colorOnSurface"
+                tools:text="12.5" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:textColor="?android:attr/textColorSecondary"
+                android:text="@string/liters" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/duration_stat_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtElapsedTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?attr/colorOnSurface"
+                tools:text="100" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:textColor="?android:attr/textColorSecondary"
+                android:text="@string/minutes_short" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

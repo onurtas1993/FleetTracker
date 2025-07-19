@@ -1,0 +1,94 @@
+<resources>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">API_KEY_HERE</string>
+
+    <!-- General App Strings -->
+    <string name="language">English</string>
+    <string name="app_name">Fleet Tracker</string>
+    <string name="app_version_label">App version: </string>
+    <string name="error_getting_version">Could not retrieve app version.</string>
+    <string name="select_button_text">Select</string>
+    <string name="cancel_button_text">Cancel</string>
+    <string name="minutes">Minutes</string>
+    <string name="minutes_short"> Min</string>
+    <string name="liters"> Liter</string>
+    <string name="kilometers"> km</string>
+
+    <!-- Login & Onboarding -->
+    <string name="LoginActivityTitle">Fleet Tracker - Login</string>
+    <string name="login">Login</string>
+    <string name="reset">Reset</string>
+    <string name="login_welcome_title">Fleet at Your Fingertips</string>
+    <string name="hint_email">username</string>
+    <string name="hint_password">password</string>
+
+    <!-- Dashboard -->
+    <string name="HomeFragmentTitle">Fleet Tracker - Dashboard</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="active_vehicles">Active Vehicles</string>
+    <string name="parked_vehicles">Parked Vehicles</string>
+    <string name="crashes">Crashes</string>
+    <string name="breaches">Breaches</string>
+    <string name="under_maintenance">Under Maintenance</string>
+    <string name="fuel_consumption">Fuel Consumption</string>
+    <string name="TotalDrivingScore">Total Driving Score</string>
+
+    <!-- Trips -->
+    <string name="TripsFragmentTitle">Fleet Tracker - Trips</string>
+    <string name="title_activity_trips">TripsActivity</string>
+    <string name="TripDetailsActivity">Fleet Tracker - Trip Details</string>
+    <string name="TripsFilterActivityTitle">Fleet Tracker - Trip Filtering</string>
+    <string name="search_bar_trip_hint">Enter date, license plate, or driver</string>
+    <!-- For TripsFilterActivity Toasts and Messages -->
+    <string name="end_date_adjusted">End date was adjusted to match the start date.</string>
+    <string name="end_date_cannot_be_before_start_date">Error: End date cannot be before the start date.</string>
+    <string name="trips_filter_all">All</string>
+    <string name="trips_filter_last_month">Last Month</string>
+    <string name="trips_filter_last_week">Last Week</string>
+    <string name="trips_filter_today">Today</string>
+    <string name="filter_apply">Apply Filters</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="select_date">Select Date</string>
+    <string name="distance">Distance</string>
+    <string name="duration">Duration</string>
+    <string name="overall_score">Overall Score</string>
+    <string name="safety_score">Safety Score</string>
+    <string name="economy_score">Economy Score</string>
+    <string name="trips">Trips</string>
+
+    <!-- Drivers -->
+    <string name="DriversFragmentTitle">Fleet Tracker - Drivers</string>
+    <string name="DriverDetailsTitle">Fleet Tracker - Driver Trip Scorecard</string>
+    <string name="filter_by_driver_name">Filter by driver name</string>
+    <string name="drivers">Drivers</string>
+
+    <!-- Vehicles -->
+    <string name="VehiclesFragmentTitle">Fleet Tracker - Vehicles</string>
+    <string name="VehicleStatusActivityTitle">Fleet Tracker - Vehicle Status</string>
+    <string name="search_bar_hint">Search for a vehicle</string>
+    <string name="car_status">Car Status</string>
+    <string name="engine_coolant_temperature">Eng. Coolant Temperature</string>
+    <string name="battery_voltage">Battery Voltage</string>
+    <string name="total_milage">Total Milage</string>
+    <string name="next_maintanence">Next Maintanence</string>
+    <string name="error_codes">Error Codes Listed Below</string>
+    <string name="curren_location">Location</string>
+    <string name="vehicles">Vehicles</string>
+    <string name="model">Model:</string>
+    <string name="brand">Brand:</string>
+    <string name="year">Year:</string>
+    <string name="color">Color:</string>
+    <string name="transmission">Transmission:</string>
+    <string name="plate">Plate:</string>
+    <string name="filter_by_plate_number">Filter by license plate</string>
+    <string name="exhaust_emmision">Exhaust Emmision</string>
+    <string name="faults">Engine Faults</string>
+    <string name="average_fuel_consumption">L/100 km</string>
+    <string name="state">State</string>
+
+    <!-- Settings -->
+    <string name="SettingsFragmentTitle">Fleet Tracker - Settings</string>
+    <string name="settings">Settings</string>
+    <string name="language_message">Change your preferred language:</string>
+
+</resources>

@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_dashboard"
+        android:icon="@drawable/dashboard_icon"
+        android:title="@string/dashboard" />
+    <item
+        android:id="@+id/nav_trips"
+        android:icon="@drawable/trips_48dp"
+        android:title="@string/trips" />
+    <item
+        android:id="@+id/nav_vehicles"
+        android:icon="@drawable/cars_48dp"
+        android:title="@string/vehicles" />
+    <item
+        android:id="@+id/nav_drivers"
+        android:icon="@drawable/driver"
+        android:title="@string/drivers" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/settings_48dp"
+        android:title="@string/settings" />
+</menu>

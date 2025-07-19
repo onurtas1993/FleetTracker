@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_background"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_marginTop="40dp"
+            android:visibility="visible">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/progress_overall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleX="0.75"
+                    android:scaleY="0.75"
+                    app:cpb_background_progressbar_color="#545454"
+                    app:cpb_background_progressbar_width="5dp"
+                    app:cpb_progressbar_color="#F44336"
+                    app:cpb_progressbar_width="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/TotalDrivingScore"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24dp" />
+                <TextView
+                    android:id="@+id/txtOverallScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:text="000"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="50dp" />
+
+
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:layout_width="240dp"
+                        android:layout_height="240dp"
+                        android:layout_centerInParent="true"
+                        app:cpb_background_progressbar_color="#545454"
+                        app:cpb_background_progressbar_width="5dp"
+                        app:cpb_progressbar_color="#F44336"
+                        app:cpb_progressbar_width="10dp" />
+
+                    <TextView
+                        android:id="@+id/txtTotalMileage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:text="00000"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="40dp" />
+
+                    <TextView
+                        android:layout_below="@+id/txtTotalMileage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:text="Km"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5" >
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:layout_width="240dp"
+                        android:layout_height="240dp"
+                        android:layout_centerInParent="true"
+                        app:cpb_background_progressbar_color="#545454"
+                        app:cpb_background_progressbar_width="5dp"
+                        app:cpb_progressbar_color="#F44336"
+                        app:cpb_progressbar_width="10dp" />
+
+                    <TextView
+                        android:id="@+id/txtTotalTrips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:text="000"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="40dp" />
+
+                    <TextView
+                        android:layout_below="@+id/txtTotalTrips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:text="Trips"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/tempTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last Updated:"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/txtLastUpdated"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@id/tempTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DATE HERE"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/loadingProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_background"
+            android:visibility="visible"
+            tools:visibility="invisible">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/colorAccent"
+                android:indeterminateTintMode="src_atop" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
