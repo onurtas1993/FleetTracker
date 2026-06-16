@@ -17,9 +17,6 @@ Android application for fleets to continue growing their businesses by keeping t
 <table>
   <tr>
     <td>
-      <img src="https://www.dropbox.com/scl/fi/0nl5q24uronb5c0f2mvbg/banner.png?rlkey=42hecs9sxyhsiuucphyj5j1i4&raw=1" width="300"/>
-    </td>
-    <td>
 
 ## Features
 - Track and manage fleet vehicle inventory
@@ -36,7 +33,7 @@ Android application for fleets to continue growing their businesses by keeping t
 </table>
 
 
-<img src="https://www.dropbox.com/scl/fi/j4ckw5r589s5aire2zcbp/app_screens.jpg?rlkey=3vu7agism7fagu466mvb24be5&raw=1" width="100%"/>
+<img src="https://raw.githubusercontent.com/onurtas1993/images/refs/heads/main/fleet-tracker_screenshot.jpg"/>
 
 ## Example Use Cases
 
